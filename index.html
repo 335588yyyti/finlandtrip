@@ -126,6 +126,17 @@ h3{font-size:18px;margin:0 0 8px}
 .rows b{flex:0 0 2.6em;color:var(--muted);font-weight:600}
 .outfit{margin-top:10px;background:var(--g-soft);border:1px solid var(--g-bd);border-radius:12px;padding:10px 12px;font-size:16px}
 .outfit strong{color:var(--green)}
+.lv{display:inline-block;font-size:14px;font-weight:700;padding:1px 10px;border-radius:99px;margin-right:6px;white-space:nowrap}
+.lv.l1{color:var(--muted);background:var(--card2);border:1px solid var(--line)}
+.lv.l2{color:var(--on-accent);background:var(--teal)}
+.lv.l3{color:var(--on-accent);background:var(--green)}
+.lv.l4{color:var(--on-accent);background:var(--violet)}
+.plist li.grp{border-top:0;padding:14px 2px 2px;font-size:15px;font-weight:700;color:var(--green)}
+.plist li.grp:first-child{padding-top:4px}
+.plist li.grp + li{border-top:0}
+.levels{display:grid;gap:8px;margin:6px 0 0}
+.levels div{display:flex;gap:10px;align-items:flex-start;font-size:16px}
+.levels .lv{flex:0 0 auto;margin-top:2px}
 
 /* checklist */
 .tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px;scrollbar-width:none}
@@ -278,6 +289,38 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:15px}
         <li><strong>羊毛襪優於發熱襪</strong>；不要穿兩雙厚襪，鞋子太緊血液不流通反而腳冰。</li>
         <li>頭、脖子、手、腳最容易失溫：毛帽要蓋耳，脖圍可拉上遮臉。</li>
         <li>手套：觸控內層手套（拍照用）＋外層滑雪手套或連指手套。</li>
+        <li><strong>不用每天穿不同衣服</strong>：外套、雪褲、中層可以重複穿，每天換衛生衣和襪子就好。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>保暖等級（每日行程會標示）</h3>
+      <div class="levels">
+        <div><span class="lv l1">機上輕便</span><span>好穿脫的洋蔥式＋舒適長褲，大外套放隨身。</span></div>
+        <div><span class="lv l2">一般冬裝</span><span>衛生衣＋毛衣或刷毛＋大外套，圍巾、手套。</span></div>
+        <div><span class="lv l3">極地裝</span><span>三層洋蔥＋雪褲＋雪靴＋毛帽、脖圍、雙層手套。</span></div>
+        <div><span class="lv l4">最保暖</span><span>極地裝全部穿上＋暖暖包貼背、腹部、腳底。</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>特別怕冷的人</h3>
+      <ul class="dots">
+        <li>中層多加一件<strong>輕羽絨背心</strong>，軀幹暖了手腳才會暖。</li>
+        <li>暖暖包每天 6–8 片：<strong>後腰、肚子、腳底</strong>最有效，手握一片放口袋。</li>
+        <li>毛帽外再加<strong>耳罩</strong>，脖圍拉高到鼻子。</li>
+        <li>等極光時不要一直站著，小步走動、踏腳，比較不會凍僵。</li>
+        <li>手套濕了馬上換<strong>備用手套</strong>，濕手套比沒戴還冷。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>保養也是保暖（全家乾肌）</h3>
+      <ul class="dots">
+        <li>洗澡水不要太燙，<strong>洗完 3 分鐘內</strong>就擦身體乳。</li>
+        <li>出門前臉擦<strong>厚一點的乳霜</strong>，避免被冷風吹傷。</li>
+        <li>嘴角、鼻子、腳跟容易乾裂，睡前擦凡士林；護唇膏隨時補，睡前厚敷當唇膜。</li>
+        <li>護手霜隨身，戶外回來、洗完手就擦。</li>
+        <li>飯店暖氣很乾，睡前可以敷保濕面膜。</li>
+        <li>不要用保濕噴霧，冷空氣裡蒸發快，反而更乾。</li>
+        <li>雪地反光強，白天在戶外待很久的話，可以擦一點防曬。</li>
       </ul>
     </div>
   </section>
@@ -415,34 +458,34 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:15px}
   var DAYS = [
     { d:"1/25（一）", t:"桃園出發", tags:["機上過夜"],
       rows:[["行程","晚上集合，23:25 長榮飛慕尼黑"],["住","機上"]],
-      wear:"好穿脫的洋蔥式＋舒適長褲；機上會冷可帶薄外套。大外套、毛帽放隨身，抵達慕尼黑清晨約 0°C 上下。" },
+      lv:"l1", lvName:"機上輕便", wear:"機上會冷可帶薄外套；大外套、毛帽放隨身，抵達慕尼黑清晨約 0°C 上下。" },
     { d:"1/26（二）", t:"慕尼黑市區", tags:[],
       rows:[["景點","BMW 世界、奧林匹克公園、新市政廳、瑪麗恩廣場"],["午","德國豬腳"],["晚","自理"],["住","LEONARDO／HOLIDAY INN／NH 或同級"]],
-      wear:"一般冬裝：保暖內層＋毛衣＋大外套、圍巾手套。" },
+      lv:"l2", lvName:"一般冬裝", wear:"保暖內層＋毛衣＋大外套、圍巾手套。" },
     { d:"1/27（三）", t:"飛赫爾辛基 → 極地夜臥火車", tags:["夜臥火車"],
       rows:[["行程","慕尼黑飛赫爾辛基，搭極地夜臥火車往羅凡尼亞米（二人一室）"],["午","自理"],["晚","發餐費 €15／人"],["住","夜臥火車"]],
-      wear:"好穿脫為主，車廂內有暖氣。<strong>備拖鞋和盥洗包</strong>放小袋子隨身，方便車上使用。" },
+      lv:"l2", lvName:"一般冬裝", wear:"好穿脫為主，車廂內有暖氣。<strong>備拖鞋和盥洗包</strong>放小袋子隨身，方便車上使用。" },
     { d:"1/28（四）", t:"羅凡尼亞米・聖誕老人村", tags:["追極光 第1晚"],
       rows:[["景點","聖誕老人村（跨北極圈證書、聖誕郵局）"],["午","聖誕老人村風味餐"],["晚","芬蘭風味餐"],["住","羅凡尼亞米（或極光玻璃屋，待確認）"]],
-      wear:"<strong>全副極地裝</strong>：三層洋蔥＋雪褲＋雪靴＋毛帽、脖圍、雙層手套。" },
+      lv:"l3", lvName:"極地裝", wear:"三層洋蔥＋雪褲＋雪靴＋毛帽、脖圍、雙層手套。" },
     { d:"1/29（五）", t:"哈士奇雪橇・馴鹿雪橇", tags:["追極光 第2晚"],
       rows:[["景點","哈士奇雪橇、馴鹿雪橇"],["午","中式六菜一湯"],["晚","芬蘭風味餐"],["住","羅凡尼亞米（或極光玻璃屋，待確認）"]],
-      wear:"<strong>雪褲＋全副極地裝</strong>。坐雪橇迎風很冷，脖圍拉高遮臉，暖暖包貼背和腳底。" },
+      lv:"l3", lvName:"極地裝", wear:"坐雪橇迎風很冷，脖圍拉高遮臉，暖暖包貼背和腳底。" },
     { d:"1/30（六）", t:"凱米破冰船＋冰海漂浮", tags:["追極光 第3晚"],
       rows:[["景點","凱米破冰船、冰海漂浮（穿龍蝦裝，<strong>身高需 140cm 以上</strong>）"],["午晚","芬蘭風味餐"],["住","Scandic Kemi 或同級"]],
-      wear:"<strong>最保暖等級</strong>：全部穿上＋暖暖包。海上甲板風最大，手套和毛帽絕對不能少。" },
+      lv:"l4", lvName:"最保暖", wear:"全部穿上＋暖暖包。海上甲板風最大，手套和毛帽絕對不能少。" },
     { d:"1/31（日）", t:"聖誕老人私人見面會 → 飛赫爾辛基", tags:[],
       rows:[["行程","聖誕老人私人見面會，之後飛赫爾辛基"],["午","中式六菜一湯"],["晚","芬蘭風味餐"],["住","Scandic Grand Marina／Meilahti 或同級"]],
-      wear:"白天戶外仍用極地裝；見面會拍照可穿好看的毛衣在裡面。到赫爾辛基換一般冬裝即可。" },
+      lv:"l3", lvName:"極地裝", wear:"見面會拍照可穿好看的毛衣在裡面；到赫爾辛基換一般冬裝即可。" },
     { d:"2/1（一）", t:"飛慕尼黑 → 因戈爾斯塔特購物村", tags:[],
       rows:[["行程","赫爾辛基飛慕尼黑，前往因戈爾斯塔特購物村 Outlet"],["午","中式"],["晚","自理"]],
-      wear:"一般冬裝，選好穿脫的，方便試穿衣服。" },
+      lv:"l2", lvName:"一般冬裝", wear:"選好穿脫的，方便試穿衣服。" },
     { d:"2/2（二）", t:"慕尼黑飛桃園", tags:["機上過夜"],
       rows:[["行程","11:30 長榮慕尼黑飛桃園"],["住","機上"]],
-      wear:"機上舒適穿著；雪靴、雪褲收進託運，換好走的鞋子。" },
+      lv:"l1", lvName:"機上輕便", wear:"雪靴、雪褲收進託運，換好走的鞋子。" },
     { d:"2/3（三）", t:"抵達桃園", tags:["回家"],
       rows:[["行程","06:30 抵達桃園"]],
-      wear:"台灣比芬蘭暖很多，穿薄外套即可，厚外套收進隨身包。" }
+      lv:"l1", lvName:"機上輕便", wear:"台灣比芬蘭暖很多，穿薄外套即可，厚外套收進隨身包。" }
   ];
 
   var dayList = document.getElementById("dayList");
@@ -464,7 +507,7 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:15px}
     var ul = el("ul", "rows");
     x.rows.forEach(function(r){ ul.appendChild(el("li", null, "<b>" + r[0] + "</b><span>" + r[1] + "</span>")); });
     c.appendChild(ul);
-    c.appendChild(el("div", "outfit", "<strong>👕 當天穿搭：</strong>" + x.wear));
+    c.appendChild(el("div", "outfit", "<strong>👕 保暖等級：</strong>" + '<span class="lv ' + x.lv + '">' + x.lvName + "</span>" + x.wear));
     dayList.appendChild(c);
   });
 
@@ -472,6 +515,7 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:15px}
   function renderChecklist(listEl, items, keyBase, onChange){
     listEl.innerHTML = "";
     items.forEach(function(it){
+      if (it.group){ listEl.appendChild(el("li", "grp", it.group)); return; }
       var key = keyBase + ":" + it.id;
       var li = el("li");
       var lab = el("label");
@@ -494,44 +538,71 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:15px}
   }
   function countChecked(items, keyBase){
     var n = 0;
-    items.forEach(function(it){ if (store.get(keyBase + ":" + it.id) === "1") n++; });
+    items.forEach(function(it){ if (it.id && store.get(keyBase + ":" + it.id) === "1") n++; });
     return n;
+  }
+  function total(items){
+    return items.filter(function(it){ return it.id; }).length;
   }
 
   /* ---------- 4. 行李清單 ---------- */
   var PERSONAL = [
+    { group:"證件與電子" },
     { id:"passport", name:"護照", where:"隨身", note:"效期需到 2027/8/3 以後" },
-    { id:"base", name:"超極暖衛生衣褲 ×3", where:"託運", note:"出發當天身上穿一套" },
-    { id:"fleece", name:"刷毛中層", where:"託運" },
+    { id:"power", name:"行動電源（最多 2 個）", where:"隨身", note:"禁止託運；機上禁止使用與充電" },
+    { group:"衣物（外層、中層重複穿，每天換衛生衣和襪子）" },
+    { id:"base", name:"超極暖衛生衣褲 ×3", where:"託運", note:"每天換貼身這層；出發當天身上穿一套" },
+    { id:"fleece", name:"刷毛中層 ×2", where:"託運", note:"輪流穿" },
     { id:"shell", name:"防風防水外套", where:"隨身", note:"抵達慕尼黑馬上要穿" },
     { id:"snowpants", name:"雪褲", where:"託運", note:"待確認是否租借" },
     { id:"boots", name:"雪靴", where:"託運", note:"迪卡儂 SH900 等級，買大半號～一號（穿厚襪）" },
     { id:"crampon", name:"鞋底冰爪", where:"託運", note:"人行道結冰防滑，下車走路時套在雪靴上" },
-    { id:"wool", name:"美麗諾羊毛襪 ×4–5", where:"託運" },
+    { id:"wool", name:"美麗諾羊毛襪 ×4–5", where:"託運", note:"每天換" },
     { id:"thinsock", name:"薄排汗襪", where:"託運" },
     { id:"hat", name:"毛帽（蓋耳）", where:"隨身" },
     { id:"neck", name:"脖圍／面罩", where:"託運" },
     { id:"gloves", name:"觸控內層手套＋滑雪手套或連指手套", where:"託運" },
     { id:"slippers", name:"室內包腳拖鞋", where:"隨身", note:"夜臥火車上會用到" },
+    { group:"盥洗與保養（乾肌加強）" },
     { id:"tooth", name:"牙刷、牙膏", where:"隨身", note:"牙膏 100ml 以下；飯店不提供" },
-    { id:"lotion", name:"保濕乳液", where:"託運", note:"超過 100ml 放託運，小瓶可隨身" },
-    { id:"lip", name:"護唇膏", where:"隨身" },
-    { id:"meds", name:"個人藥品", where:"隨身" },
-    { id:"power", name:"行動電源（最多 2 個）", where:"隨身", note:"禁止託運；機上禁止使用與充電" }
+    { id:"face", name:"臉部保濕：化妝水或精華＋滋潤乳霜", where:"託運", note:"大罐放託運，100ml 以下小瓶可隨身" },
+    { id:"lip", name:"護唇膏", where:"隨身", note:"隨時補，睡前厚敷當唇膜" },
+    { id:"handcream", name:"護手霜", where:"隨身", note:"小條 100ml 以下；戶外回來、洗手後就擦" },
+    { group:"藥品" },
+    { id:"meds", name:"個人常備藥", where:"隨身", note:"帶足天數再多 3 天；保留原包裝、附英文藥單" },
+    { id:"m_cold", name:"感冒藥", where:"隨身" },
+    { id:"m_fever", name:"退燒止痛藥", where:"隨身" },
+    { id:"m_gi", name:"腸胃藥／止瀉藥", where:"隨身" },
+    { id:"m_motion", name:"暈車藥", where:"隨身", note:"遊覽車、破冰船用" },
+    { id:"m_throat", name:"喉糖", where:"隨身" },
+    { id:"m_band", name:"OK 繃", where:"隨身" }
+  ];
+  var COLD_EXTRA = [
+    { group:"怕冷加強" },
+    { id:"down", name:"輕羽絨背心", where:"託運", note:"中層多加一層" },
+    { id:"earmuff", name:"耳罩", where:"隨身", note:"或毛帽內再加一層" },
+    { id:"warmer2", name:"自己的暖暖包（加量）", where:"託運", note:"每天 6–8 片：後腰、肚子、腳底" },
+    { id:"insole", name:"加熱鞋墊／暖腳貼", where:"託運" },
+    { id:"glove2", name:"備用手套一副", where:"託運", note:"手套濕了就換" }
   ];
   var SHARED = [
+    { group:"共用物品" },
     { id:"adapter", name:"歐規雙圓孔轉接頭", where:"隨身" },
     { id:"warmer", name:"暖暖包（貼式＋手握＋腳底）", where:"託運", note:"每人每天 4–6 片" },
     { id:"vacbag", name:"收納壓縮袋", where:"託運", note:"壓縮厚衣服，回程裝戰利品也用得到" },
     { id:"coins", name:"歐元零錢", where:"隨身", note:"公廁付費、床頭小費" },
-    { id:"cmeds", name:"常備藥", where:"隨身" },
-    { id:"umbrella", name:"摺疊傘", where:"託運" }
+    { id:"umbrella", name:"摺疊傘", where:"託運" },
+    { group:"身體保養（全家乾肌）" },
+    { id:"bodylotion", name:"身體乳（大罐、滋潤型）", where:"託運", note:"洗完澡 3 分鐘內擦" },
+    { id:"vaseline", name:"凡士林", where:"託運", note:"嘴角、鼻子、腳跟乾裂處" },
+    { id:"facemask", name:"保濕面膜", where:"託運", note:"飯店暖氣乾，睡前敷" },
+    { id:"footcream", name:"足霜／腳跟霜", where:"託運" }
   ];
   var TABS = [
     { id:"dad", name:"爸爸", items:PERSONAL },
     { id:"mom", name:"媽媽", items:PERSONAL },
     { id:"sis", name:"姊姊", items:PERSONAL },
-    { id:"sis2", name:"妹妹", items:PERSONAL },
+    { id:"sis2", name:"妹妹", items:PERSONAL.concat(COLD_EXTRA) },
     { id:"all", name:"全家共用", items:SHARED }
   ];
 
@@ -549,7 +620,7 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:15px}
       b.type = "button";
       b.setAttribute("role", "tab");
       b.setAttribute("aria-selected", t.id === current ? "true" : "false");
-      b.innerHTML = t.name + '<span class="cnt">' + countChecked(t.items, "pack:" + t.id) + "/" + t.items.length + "</span>";
+      b.innerHTML = t.name + '<span class="cnt">' + countChecked(t.items, "pack:" + t.id) + "/" + total(t.items) + "</span>";
       b.addEventListener("click", function(){
         current = t.id;
         store.set("tab", current);
@@ -560,9 +631,9 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:15px}
   }
   function updatePackProgress(){
     var t = tabById(current);
-    var n = countChecked(t.items, "pack:" + t.id);
-    document.getElementById("packProg").textContent = t.name + "：已打包 " + n + " / " + t.items.length + (n === t.items.length ? " 🎉" : "");
-    document.getElementById("packBar").style.width = (n / t.items.length * 100) + "%";
+    var n = countChecked(t.items, "pack:" + t.id), all = total(t.items);
+    document.getElementById("packProg").textContent = t.name + "：已打包 " + n + " / " + all + (n === all ? " 🎉" : "");
+    document.getElementById("packBar").style.width = (n / all * 100) + "%";
     renderTabs();
   }
   function renderPack(){
@@ -573,7 +644,7 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:15px}
   document.getElementById("packReset").addEventListener("click", function(){
     var t = tabById(current);
     if (!window.confirm("確定要清除「" + t.name + "」的所有勾選嗎？")) return;
-    t.items.forEach(function(it){ store.del("pack:" + t.id + ":" + it.id); });
+    t.items.forEach(function(it){ if (it.id) store.del("pack:" + t.id + ":" + it.id); });
     renderPack();
   });
   renderPack();
