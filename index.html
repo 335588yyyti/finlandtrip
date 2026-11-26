@@ -269,7 +269,8 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:15px}
     <p class="small muted">
       <span class="tag carry">隨身</span> 帶上飛機的手提行李
       <span class="tag">託運</span> 放大行李箱<br>
-      超過 100ml 的液體（乳液、大瓶藥水等）一律放託運；行動電源只能隨身、不能託運。
+      <strong>隨身液體規則</strong>：液體、膏狀、凝膠每瓶 100ml 以下，全部裝進一個 1 公升透明夾鏈袋，過安檢時拿出來；超過 100ml 的一律放託運。<br>
+      行動電源、備用鋰電池只能隨身、不能託運；冰爪等有尖刺的物品只能託運。
     </p>
   </section>
 
@@ -346,7 +347,7 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:15px}
     <div class="grid">
       <div class="info"><div class="k">時差</div><div class="v">芬蘭 比台灣慢 6 小時<br>德國 比台灣慢 7 小時</div></div>
       <div class="info"><div class="k">電壓／插頭</div><div class="v">220–240V<br>雙圓孔插頭</div></div>
-      <div class="info"><div class="k">託運行李（長榮）</div><div class="v">經濟艙每人 2 件<br>每件 23kg</div></div>
+      <div class="info"><div class="k">託運行李（長榮）</div><div class="v">經濟艙每人 2 件<br>每件 23kg<br><span class="small muted">手提 1 件 7kg（以機票為準）</span></div></div>
       <div class="info"><div class="k">小費建議</div><div class="v">領隊／司機 每人 €120<br>床頭 每房每晚 €1</div></div>
       <div class="info wide"><div class="k">飯店備品</div><div class="v">不提供拖鞋、牙刷、牙膏，要自己帶</div></div>
       <div class="info wide"><div class="k">熱水</div><div class="v">鍋爐式供水，不熱時等 30–60 分鐘再試</div></div>
@@ -561,42 +562,48 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:15px}
   var PERSONAL = [
     { group:"證件與電子" },
     { id:"passport", name:"護照", where:"隨身", note:"效期需到 2027/8/3 以後" },
-    { id:"power", name:"行動電源（最多 2 個）", where:"隨身", note:"禁止託運；機上禁止使用與充電" },
+    { id:"power", name:"行動電源（最多 2 個）", where:"隨身", note:"只能隨身、不能託運；每個 100Wh 以下（約 27,000mAh），機身要有 Wh 標示；機上禁止使用與充電；放座位前方口袋或腳邊，不放上方行李櫃" },
+    { group:"機上過夜包（隨身，去回程、夜臥火車都用）" },
+    { id:"tooth", name:"牙刷、牙膏", where:"隨身", note:"牙膏 100ml 以下；飯店不提供" },
+    { id:"eyemask", name:"眼罩＋耳塞", where:"隨身", note:"機上、夜臥火車比較好睡" },
+    { id:"facewipe", name:"洗臉濕紙巾或卸妝棉", where:"隨身", note:"起床後簡單擦臉" },
+    { id:"spareset", name:"換洗內衣褲＋襪子一套", where:"隨身", note:"託運行李晚到，第一天也有得換" },
+    { id:"cable", name:"手機充電線", where:"隨身", note:"座位有 USB 孔可充手機（行動電源機上不能用）" },
+    { id:"thinlayer", name:"薄長袖或薄外套", where:"隨身", note:"機艙冷氣強，大外套太熱" },
+    { id:"neckpillow", name:"頸枕", where:"隨身", note:"長途航班、夜臥火車用" },
+    { id:"moistmask", name:"保濕口罩", where:"隨身", note:"機上睡覺、飯店暖氣房睡前戴，喉嚨比較不乾" },
+    { id:"eyedrop", name:"眼藥水", where:"隨身", note:"一人一瓶，100ml 以下；飛機上、飯店暖氣都很乾" },
+    { id:"bodylotion_s", name:"身體乳（小條）", where:"隨身", note:"100ml 以下；飛機上、夜臥火車上隨時補擦" },
+    { id:"vaseline_s", name:"凡士林（小罐）", where:"隨身", note:"100ml 以下；飛機上、戶外隨時擦嘴角、鼻子" },
+    { id:"slippers", name:"室內包腳拖鞋", where:"隨身", note:"機上、夜臥火車上換穿" },
     { group:"衣物（外層、中層重複穿，每天換衛生衣和襪子）" },
     { id:"base", name:"超極暖衛生衣褲 ×3", where:"託運", note:"每天換貼身這層；出發當天身上穿一套" },
     { id:"fleece", name:"刷毛中層 ×2", where:"託運", note:"輪流穿" },
-    { id:"shell", name:"防風防水外套", where:"隨身", note:"抵達慕尼黑馬上要穿" },
+    { id:"shell", name:"防風防水外套（大外套）", where:"隨身", note:"台灣出發時拿在手上或塞進隨身包，不用穿；抵達慕尼黑清晨約 0°C，下飛機前穿上" },
     { id:"snowpants", name:"雪褲", where:"託運", note:"待確認是否租借；褲管有束口更好，雪不會跑進去" },
     { id:"boots", name:"雪靴", where:"託運", note:"選靜止時耐寒 -15°C 以下較理想；穿厚羊毛襪試穿，腳跟後要塞得進一根手指；不夠暖就加羊毛襪＋暖腳貼＋保暖鞋墊" },
     { id:"warminsole", name:"保暖鞋墊（羊毛或鋁箔）", where:"託運", note:"試穿雪靴時一起放進去，確認空間夠" },
-    { id:"crampon", name:"鞋底冰爪", where:"託運", note:"人行道結冰防滑，下車走路時套在雪靴上" },
+    { id:"crampon", name:"鞋底冰爪", where:"託運", note:"有尖刺，不能放隨身；人行道結冰防滑，下車走路時套在雪靴上" },
     { id:"wool", name:"美麗諾羊毛襪 ×4–5", where:"託運", note:"選 100% 羊毛或美麗諾，買時看成分；每天換" },
     { id:"thinsock", name:"薄排汗襪", where:"託運" },
-    { id:"hat", name:"毛帽（蓋耳）", where:"隨身" },
-    { id:"neck", name:"脖圍／面罩", where:"託運" },
+    { id:"hat", name:"毛帽（蓋耳）", where:"隨身", note:"下飛機就要戴" },
+    { id:"neck", name:"脖圍／面罩", where:"隨身", note:"下飛機就要戴" },
     { id:"hood", name:"防風保暖頭套（護耳＋面罩）", where:"隨身", note:"雪橇、破冰船、等極光風大時用；深色或亮色都可以，避開白色、米色（跟雪融在一起、容易髒）；全家不同色比較好認" },
+    { id:"gloves", name:"觸控內層手套＋滑雪手套或連指手套", where:"隨身", note:"下飛機就要戴" },
     { id:"reflect", name:"反光配件（反光臂環或反光貼條）", where:"託運", note:"晚上走沒有路燈的路段時戴，讓車和別人看得到你" },
-    { id:"gloves", name:"觸控內層手套＋滑雪手套或連指手套", where:"託運" },
-    { id:"slippers", name:"室內包腳拖鞋", where:"隨身", note:"夜臥火車上會用到" },
     { group:"盥洗與保養（乾肌加強）" },
-    { id:"tooth", name:"牙刷、牙膏", where:"隨身", note:"牙膏 100ml 以下；飯店不提供" },
     { id:"face", name:"臉部保濕：化妝水或精華＋滋潤乳霜", where:"託運", note:"大罐放託運，100ml 以下小瓶可隨身" },
     { id:"lip", name:"護唇膏", where:"隨身", note:"隨時補，睡前厚敷當唇膜" },
     { id:"handcream", name:"護手霜", where:"隨身", note:"小條 100ml 以下；戶外回來、洗手後就擦" },
-    { id:"cuticle", name:"指緣油", where:"隨身", note:"極冷乾燥指甲易裂、翹；睡前擦指緣" },
-    { id:"vaseline_s", name:"凡士林（小罐）", where:"隨身", note:"飛機上、戶外隨時擦嘴角、鼻子" },
-    { id:"bodylotion_s", name:"身體乳（小條）", where:"隨身", note:"100ml 以下；飛機上、夜臥火車上隨時補擦" },
-    { group:"眼睛與機上用品" },
-    { id:"eyedrop", name:"眼藥水", where:"隨身", note:"一人一瓶；飛機上、飯店暖氣都很乾" },
+    { id:"cuticle", name:"指緣油", where:"隨身", note:"100ml 以下；極冷乾燥指甲易裂、翹，睡前擦指緣" },
+    { group:"眼睛與其他" },
     { id:"glasses", name:"眼鏡＋眼鏡盒", where:"隨身", note:"有戴才需要；眼睛乾或冷風大時改戴眼鏡比較舒服" },
     { id:"contacts", name:"隱形眼鏡", where:"隨身", note:"有戴才需要；帶足天數再多幾副備用" },
     { id:"lenssol", name:"隱形眼鏡保養液", where:"託運", note:"大瓶放託運；隨身帶 100ml 以下旅行瓶" },
     { id:"sunglasses", name:"墨鏡", where:"隨身", note:"雪地反光刺眼；白天戶外、坐雪橇用" },
     { id:"mask", name:"口罩", where:"隨身", note:"機場、機上人多時戴；帶幾片備用" },
-    { id:"moistmask", name:"保濕口罩", where:"隨身", note:"機上睡覺、飯店暖氣房睡前戴，喉嚨比較不乾" },
-    { id:"neckpillow", name:"頸枕", where:"隨身", note:"長途航班、夜臥火車用" },
     { group:"藥品" },
-    { id:"meds", name:"個人常備藥", where:"隨身", note:"帶足天數再多 3 天；保留原包裝、附英文藥單" },
+    { id:"meds", name:"個人常備藥", where:"隨身", note:"帶足天數再多 3 天；保留原包裝、附英文藥單；安眠藥、強效止痛藥等管制藥品進芬蘭可能要額外證明，先問開藥的醫院；藥水 100ml 以下，超過要附醫師證明" },
     { id:"m_cold", name:"感冒藥", where:"隨身" },
     { id:"m_fever", name:"退燒止痛藥", where:"隨身" },
     { id:"m_gi", name:"腸胃藥／止瀉藥", where:"隨身" },
@@ -623,8 +630,8 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:15px}
     { group:"追極光用品" },
     { id:"tripod", name:"手機腳架＋藍牙遙控器", where:"託運", note:"拍極光要長時間曝光，手持會糊；出發前先在家練習架設" },
     { id:"thermos", name:"小保溫瓶", where:"託運", note:"等極光時裝熱茶；過安檢前要清空" },
-    { id:"snack", name:"零食", where:"隨身", note:"巧克力、餅乾，等極光時補充熱量" },
-    { id:"torch", name:"小手電筒（有紅光模式更好）", where:"託運", note:"暗處走雪地照路；紅光不影響眼睛適應黑暗、不干擾別人拍照" },
+    { id:"snack", name:"零食", where:"隨身", note:"巧克力、餅乾，等極光時補充熱量；不要帶含肉、含奶的（牛肉乾、肉鬆、起司、奶粉），歐盟禁止從台灣帶入" },
+    { id:"torch", name:"小手電筒（有紅光模式更好）", where:"隨身", note:"內建鋰電池放隨身，備用電池只能隨身；暗處走雪地照路，紅光不影響眼睛適應黑暗、不干擾別人拍照" },
     { group:"身體保養（全家乾肌）" },
     { id:"bodylotion", name:"身體乳（大罐、滋潤型）", where:"託運", note:"全家共用；洗完澡 3 分鐘內擦" },
     { id:"vaseline", name:"凡士林（大罐）", where:"託運", note:"全家共用；睡前擦嘴角、鼻子、腳跟乾裂處" },
@@ -688,7 +695,7 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:15px}
     { id:"gear", name:"雪橇業者是否借雪衣、雪靴" },
     { id:"igloo", name:"極光玻璃屋是哪一晚（D4–D6）" },
     { id:"train", name:"夜臥火車設備（盥洗、插座、毛巾）" },
-    { id:"domestic", name:"國內線行李限制" },
+    { id:"domestic", name:"歐洲段航班（慕尼黑↔赫爾辛基、拉普蘭→赫爾辛基）是哪家航空、手提與託運限制" },
     { id:"handwarmer", name:"充電暖手寶算不算行動電源" },
     { id:"float", name:"冰海漂浮年齡限制" },
     { id:"santa", name:"聖誕老人拍照是否收費" },
